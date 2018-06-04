@@ -1,11 +1,9 @@
-package util;
-
 import composite.Box;
-import composite.Leaf;
-import parser.ParagraphHandler;
-import io.TextInput;
+import composite.Lexeme;
+import util.TextInput;
+import parser.ParagraphParser;
 
-public class Trigger {
+public class Starter {
     public static void main(String[] args){
         TextInput textInput = new TextInput();
         textInput.readFile("example.txt");
@@ -13,21 +11,21 @@ public class Trigger {
         //System.out.println(textInput.getContent());
         //input text from file
         Box box = new Box();
-        box.add(new Leaf(textInput.getContent().toString()));
+        box.add(new Lexeme(textInput.getContent().toString()));
         //
-        ParagraphHandler h1 = new ParagraphHandler();
+        ParagraphParser h1 = new ParagraphParser();
         /*
-        SentenceHandler h2 = new SentenceHandler();
-        WordHandler h3 = new WordHandler();
+        SentenceParser h2 = new SentenceParser();
+        WordParser h3 = new WordParser();
         h1.setNext(h2);
         h2.setNext(h3);
         h1.doChain(box);
         */
         box = h1.handle(box);
         System.out.println(box.getParts().size());
-        /*baseBox.add(new Leaf("leaf1 "));
-        baseBox.add(new Leaf(" leaf2 "));
-        baseBox.add(new Leaf(" leaf3"));
+        /*baseBox.add(new Lexeme("leaf1 "));
+        baseBox.add(new Lexeme(" leaf2 "));
+        baseBox.add(new Lexeme(" leaf3"));
         System.out.println(baseBox.print());*/
         // try-catch logger
         // reconstruct output

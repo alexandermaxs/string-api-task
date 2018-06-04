@@ -1,9 +1,9 @@
 package composite;
 
-public class Leaf implements Printable {
+public class Lexeme implements Printable {
     private String content;
 
-    public Leaf(String content){
+    public Lexeme(String content){
         this.content = content;
     }
 

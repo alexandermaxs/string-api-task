@@ -2,11 +2,11 @@ package parser;
 
 import composite.Box;
 
-public abstract class BaseHandler {
-    private BaseHandler next;
+public abstract class BaseParser {
+    private BaseParser next;
     private Box box;
 
-    public void setNext(BaseHandler h) {
+    public void setNext(BaseParser h) {
         this.next = h;
     }
 

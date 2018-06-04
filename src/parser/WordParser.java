@@ -2,8 +2,8 @@ package parser;
 
 import composite.Box;
 
-public class WordHandler extends BaseHandler{
-    private BaseHandler next;
+public class WordParser extends BaseParser {
+    private BaseParser next;
     private Box box;
 
     @Override
