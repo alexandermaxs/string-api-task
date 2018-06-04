@@ -1,9 +1,10 @@
 package composite;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Box implements Printable {
-    private ArrayList<Printable> parts = new ArrayList<>();
+    private List<Printable> parts = new ArrayList<>();
 
     @Override
     public String print(){
@@ -21,11 +22,11 @@ public class Box implements Printable {
         parts.remove(index);
     }
 
-    public ArrayList<Printable> getParts() {
+    public List<Printable> getParts() {
         return parts;
     }
 
-    public void setParts(ArrayList<Printable> parts) {
+    public void setParts(List parts) {
         this.parts = parts;
     }
 }
