@@ -1,4 +1,2 @@
 # string-api-task
-Information handling. 
-Разработка приложения, разбирающего и обрабатывающего текст. 
-Варианты для реализации: 10, 11.
+Information handling.
