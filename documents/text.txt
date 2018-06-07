@@ -89,6 +89,6 @@ public class Printer {
 }
 See also:
 
-Avoiding “!= null” statements in Java?
+Avoiding null statements in Java?
 I still can't find the problem
 If you tried to debug the problem and still don't have a solution, you can post a question for more help, but make sure to include what you've tried so far. At a minimum, include the stacktrace in the question, and mark the important line numbers in the code. Also, try simplifying the code first (see SSCCE).

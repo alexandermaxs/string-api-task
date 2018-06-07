@@ -1,9 +1,9 @@
-package composite;
+package com.epam.task2.composite;
 
-public class Lexeme implements Printable {
+public class Unit implements Printable {
     private String content;
 
-    public Lexeme(String content){
+    public Unit(String content){
         this.content = content;
     }
 

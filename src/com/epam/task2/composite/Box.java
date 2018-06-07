@@ -1,4 +1,4 @@
-package composite;
+package com.epam.task2.composite;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ public class Box implements Printable {
 
     @Override
     public String print(){
-        StringBuilder s = new StringBuilder("");
+        StringBuilder s = new StringBuilder();
         for(Printable p: parts)
             s.append(p.print());
         return s.toString();
@@ -16,10 +16,6 @@ public class Box implements Printable {
 
     public void add(Printable p){
         parts.add(p);
-    }
-
-    public void remove(int index){
-        parts.remove(index);
     }
 
     public List<Printable> getParts() {
