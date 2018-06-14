@@ -1,15 +1,10 @@
 package com.epam.task2.util;
 
-import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.apache.log4j.xml.DOMConfigurator;
 import java.io.*;
 
 public class TextUtility {
-    static Logger logger = Logger.getLogger(TextUtility.class);
-    static {
-        new DOMConfigurator().doConfigure("log4j.xml", LogManager.getLoggerRepository());
-    }
+    private static final Logger logger = Logger.getLogger(TextUtility.class);
 
     public String readFile(String filepath){
         StringBuilder content = new StringBuilder("");
@@ -22,7 +17,7 @@ public class TextUtility {
             }
             br.close();
         } catch (IOException e) {
-            logger.error("Error occurred while reading the file.\n", e);
+            logger.error("Error occurred while reading the file.", e);
         }
         return content.toString();
     }
@@ -35,7 +30,7 @@ public class TextUtility {
             pw.append(content);
             pw.close();
         } catch (IOException e) {
-            logger.error("Error occurred while writing the file.\n", e);
+            logger.error("Error occurred while writing the file.", e);
         }
     }
 }

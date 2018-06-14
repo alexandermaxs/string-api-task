@@ -16,14 +16,14 @@ public class Eraser {
         while (matcher.find()) {
             sentences.add(matcher.group());
         }
-        String substring = regex.getString("task11");
+        String substring = regex.getString("lexeme");
         Pattern substringPattern = Pattern.compile(substring);
         StringBuilder text = new StringBuilder("");
         for (String s: sentences){
             matcher = substringPattern.matcher(s);
             String max = "";
             while (matcher.find()) {
-                if (matcher.group().length() >= max.length()){
+                if (matcher.group().length() >= max.length()) {
                     max = matcher.group();
                 }
             }
