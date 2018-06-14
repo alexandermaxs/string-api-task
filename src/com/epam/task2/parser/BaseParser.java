@@ -1,6 +1,6 @@
 package com.epam.task2.parser;
 
-import com.epam.task2.composite.Box;
+import com.epam.task2.entity.composite.Box;
 
 public abstract class BaseParser {
     private BaseParser nextParser;

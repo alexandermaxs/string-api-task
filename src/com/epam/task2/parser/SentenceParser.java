@@ -1,8 +1,8 @@
 package com.epam.task2.parser;
 
-import com.epam.task2.composite.Box;
-import com.epam.task2.composite.Unit;
-import com.epam.task2.composite.Printable;
+import com.epam.task2.entity.composite.Box;
+import com.epam.task2.entity.composite.Unit;
+import com.epam.task2.entity.composite.Printable;
 import com.epam.task2.util.RegexConfigurator;
 import java.util.ArrayList;
 import java.util.List;
